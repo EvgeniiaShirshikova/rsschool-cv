@@ -23,7 +23,7 @@ Html, CSS, SASS, GSAP, Lenis, JavaScript (basic), React (basic), Git, Webflow, F
 
 This function shows real time in different time zones eg New York and Paris:
 
-'''
+```
 function showTime(city, timeZone) {
 let now = new Date();
 let time = now.toLocaleTimeString("en-US", {
@@ -49,7 +49,7 @@ setTimeout(() => showTime(city, timeZone), 1000);
 
 showTime("newyork", "America/New_York");
 showTime("paris", "Europe/Paris");
-'''
+```
 
 ### Projects
 
