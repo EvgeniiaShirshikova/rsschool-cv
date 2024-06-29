@@ -15,6 +15,10 @@ evgeniiashirshikova@gmail.com
 I started my path as a frontend developer at 2022 when I left my banking career. I've been studying at ITgirls school as frontend developer. About a year ago I've known Webflow so I switched to webflow developing and currently I work as webflow developer on Upwork freelance. My clients are mainly web agencies and I develop websites according to their Figma designs. I often use basic JavaScript code and different JS libraries at my projects such as GSAP, Lenis etc.
 My goal is to improve my JavaScript knowledge and find a job as Junior frontend developer.
 
+### Technologies and tools
+
+Html, CSS, SASS, GSAP, Lenis, JavaScript (basic), React (basic), Git, Webflow, Figma, Chat GPT
+
 ### Code example:
 
 This function shows real time in different time zones eg New York and Paris:
@@ -46,3 +50,7 @@ setTimeout(() => showTime(city, timeZone), 1000);
 showTime("newyork", "America/New_York");
 showTime("paris", "Europe/Paris");
 '''
+
+### Projects
+
+https://github.com/EvgeniiaShirshikova/DestinyMatrix
