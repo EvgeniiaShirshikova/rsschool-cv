@@ -1,4 +1,6 @@
-# Evgeniia Shirshikova ![photo](/img/photo.jpg "Profile picture")
+# Evgeniia Shirshikova
+
+![photo](/img/photo.jpg "Profile picture")
 
 ## Junior Frontend Developer
 
