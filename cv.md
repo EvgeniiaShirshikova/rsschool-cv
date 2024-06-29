@@ -16,3 +16,33 @@ I started my path as a frontend developer at 2022 when I left my banking career.
 My goal is to improve my JavaScript knowledge and find a job as Junior frontend developer.
 
 ### Code example:
+
+This function shows real time in different time zones eg New York and Paris:
+
+'''
+function showTime(city, timeZone) {
+let now = new Date();
+let time = now.toLocaleTimeString("en-US", {
+timeZone: timeZone,
+hour: "2-digit",
+minute: "2-digit",
+hour12: true,
+});
+let hours = time.slice(0, 2);
+let minutes = time.slice(3, 8);
+let classHours = ".hours-" + city;
+let classMinutes = ".minutes-" + city;
+let hoursWrappers = document.querySelectorAll(classHours);
+let minutesWrappers = document.querySelectorAll(classMinutes);
+hoursWrappers.forEach((item) => {
+item.innerHTML = hours;
+});
+minutesWrappers.forEach((item) => {
+item.innerHTML = minutes;
+});
+setTimeout(() => showTime(city, timeZone), 1000);
+}
+
+showTime("newyork", "America/New_York");
+showTime("paris", "Europe/Paris");
+'''
