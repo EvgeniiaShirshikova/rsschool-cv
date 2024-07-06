@@ -16,8 +16,8 @@
 
 <body>
     <div class="container">
-        <header>
-            <nav>
+        <header class="header">
+            <nav class="nav mob-hide">
                 <ul class="menu">
                     <li><a href="/#about">About me</a></li>
                     <li><a href="/#skills">Working skills</a></li>
@@ -29,9 +29,9 @@
                 </ul>
             </nav>
         </header>
-        <main>
+        <main class="main">
             <div class="col__left">
-                <div class="photo__wrapper">
+                <div class="photo__wrapper mob-hide">
                     <img src="/img/picture.png" alt="Evgeniia Shirshikova">
                 </div>
                 <section id="contacts">
@@ -58,9 +58,13 @@
                 </section>
             </div>
             <div class="col__right">
+
                 <section id="about">
                     <h1>Evgeniia Shirshikova</h1>
                     <div class="about__job">Front-End developer</div>
+                    <div class="photo__wrapper mob-show">
+                        <img src="/img/picture.png" alt="Evgeniia Shirshikova">
+                    </div>
                     <h2 class="about__title">About me</h2>
                     <div class="divider divider-grey"></div>
                     <p>My name is Evgeniia. I'm looking for Frontend developer positions in website environment,
@@ -94,33 +98,33 @@
                     <div class="divider divider-grey"></div>
                     <pre>
                     <code data-language="JavaScript">
-    function showTime(city, timeZone) {
-        let now = new Date();
-        let time = now.toLocaleTimeString("en-US", {
-            timeZone: timeZone,
-            hour: "2-digit",
-            minute: "2-digit",
-            hour12: true,
-        });
-        let hours = time.slice(0, 2);
-        let minutes = time.slice(3, 8);
-        let classHours = ".hours-" + city;
-        let classMinutes = ".minutes-" + city;
-        let hoursWrappers = 
-        document.querySelectorAll(classHours);
-        let minutesWrappers = 
-        document.querySelectorAll(classMinutes);
-        hoursWrappers.forEach((item) => {
-            item.innerHTML = hours;
-        });
-        minutesWrappers.forEach((item) => {
-            item.innerHTML = minutes;
-        });
-        setTimeout(() => showTime(city, timeZone), 1000);
-    }
+function showTime(city, timeZone) {
+    let now = new Date();
+    let time = now.toLocaleTimeString("en-US", {
+        timeZone: timeZone,
+        hour: "2-digit",
+        minute: "2-digit",
+        hour12: true,
+    });
+    let hours = time.slice(0, 2);
+    let minutes = time.slice(3, 8);
+    let classHours = ".hours-" + city;
+    let classMinutes = ".minutes-" + city;
+    let hoursWrappers = 
+    document.querySelectorAll(classHours);
+    let minutesWrappers = 
+    document.querySelectorAll(classMinutes);
+    hoursWrappers.forEach((item) => {
+        item.innerHTML = hours;
+    });
+    minutesWrappers.forEach((item) => {
+        item.innerHTML = minutes;
+    });
+    setTimeout(() => showTime(city, timeZone), 1000);
+}
                                 
-    showTime("newyork", "America/New_York");
-    showTime("paris", "Europe/Paris");
+showTime("newyork", "America/New_York");
+showTime("paris", "Europe/Paris");
     </code></pre>
                 </section>
                 <section id="projects">
@@ -150,7 +154,7 @@
                 </section>
             </div>
         </main>
-        <footer>
+        <footer class="footer">
             <div class="footer__inner">
                 <a class="footer__link" href="https://github.com/EvgeniiaShirshikova/" target="_blank">
                     <div class="footer__icon-wrapper"><img src="/img/GitHub-Icon-White-Logo.wine.svg" alt="Github icon">
@@ -159,7 +163,7 @@
                 <div>2024</div>
                 <a class="footer__link" href="https://rs.school/courses/javascript-ru" target="_blank">
                     <div class="footer__icon-wrapper"><img src="/img/rs-school-logo.svg" alt="RSschool icon">
-                    </div>RS School
+                    </div>
                 </a>
             </div>
 
