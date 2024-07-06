@@ -1,6 +1,6 @@
 body {
   font-family: "Poppins", sans-serif;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 400;
   font-style: normal;
   color: #343434;
@@ -10,7 +10,11 @@ header {
   padding: 10px;
 }
 
+ul {
+  padding: 0;
+}
 li {
+  margin: 10px 0;
   list-style: none;
 }
 
@@ -33,18 +37,38 @@ main {
   justify-content: space-between;
 }
 
+h1,
 h2 {
-  margin: 0;
   font-family: "Manrope", sans-serif;
-  font-size: 16px;
-  font-weight: 700;
+  font-size: 18px;
   font-style: normal;
   text-transform: uppercase;
 }
 
+h1 {
+  margin: 0 0 40px 0;
+  font-size: 32px;
+  font-weight: 800;
+}
+
+h2 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+p {
+  margin: 0;
+  text-align: justify;
+}
+
+.text-color-white {
+  color: white;
+}
 .container {
-  width: 1000px;
+  max-width: 1000px;
   margin: 0 auto;
+  padding: 0 40px;
 }
 
 .menu {
@@ -52,22 +76,20 @@ h2 {
   flex-direction: row;
   justify-content: space-between;
   flex-wrap: wrap;
+  gap: 20px;
 }
 
-#about {
+.col__left {
+  width: 40%;
   background-color: #e24343;
   color: #ffffff;
 }
 
-.col__left {
-  width: 30%;
-}
-
 .col__right {
-  width: 70%;
+  width: 60%;
 }
 
-.about__img-wrapper {
+.photo__wrapper {
   margin: 20px auto;
   width: 260px;
   height: 260px;
@@ -76,18 +98,37 @@ h2 {
   background-color: #eeeeee;
 }
 
-.about__img {
+.photo {
   width: 100%;
 }
 
-.about__title {
-  margin-left: auto;
+.contacts__title,
+.education__title {
   text-align: end;
 }
 
-.about__divider {
+.divider {
   width: 100%;
   height: 1px;
   margin: 10px 0;
+}
+.divider-white {
   background-color: #ffffff;
+}
+
+#contacts {
+  padding-top: 0;
+}
+
+#education {
+  height: 100%;
+  background-color: rgba(256, 256, 256, 10%);
+}
+
+#about {
+  padding-top: 0;
+}
+
+.divider-grey {
+  background-color: #343434;
 }
