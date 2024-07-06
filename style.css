@@ -24,7 +24,7 @@ a:hover {
 }
 
 section {
-  padding: 10px;
+  padding: 20px;
 }
 
 main {
@@ -34,10 +34,12 @@ main {
 }
 
 h2 {
+  margin: 0;
   font-family: "Manrope", sans-serif;
-  font-size: 32px;
-  font-weight: 400;
+  font-size: 16px;
+  font-weight: 700;
   font-style: normal;
+  text-transform: uppercase;
 }
 
 .container {
@@ -58,17 +60,17 @@ h2 {
 }
 
 .col__left {
-  width: 40%;
+  width: 30%;
 }
 
 .col__right {
-  width: 60%;
+  width: 70%;
 }
 
 .about__img-wrapper {
   margin: 20px auto;
-  width: 200px;
-  height: 200px;
+  width: 260px;
+  height: 260px;
   border-radius: 100%;
   overflow: hidden;
   background-color: #eeeeee;
@@ -76,4 +78,16 @@ h2 {
 
 .about__img {
   width: 100%;
+}
+
+.about__title {
+  margin-left: auto;
+  text-align: end;
+}
+
+.about__divider {
+  width: 100%;
+  height: 1px;
+  margin: 10px 0;
+  background-color: #ffffff;
 }
