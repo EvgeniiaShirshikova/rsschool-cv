@@ -46,7 +46,7 @@ h2 {
 }
 
 h1 {
-  margin: 0 0 40px 0;
+  margin: 0 0 20px 0;
   font-size: 32px;
   font-weight: 800;
 }
@@ -131,4 +131,9 @@ p {
 
 .divider-grey {
   background-color: #343434;
+}
+
+.about__job {
+  margin-bottom: 20px;
+  font-size: 32px;
 }

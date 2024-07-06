@@ -21,17 +21,18 @@
                 <ul class="menu">
                     <li><a href="/#about">About me</a></li>
                     <li><a href="/#skills">Working skills</a></li>
-                    <li><a href="">Language</a></li>
+                    <li><a href="/#languages">Languages</a></li>
                     <li><a href="/#contacts">Contacts</a></li>
                     <li><a href="/#education">Education</a></li>
-                    <li><a href="">Projects</a></li>
+                    <li><a href="/#code-example">Code example</a></li>
+                    <li><a href="/#projects">Projects</a></li>
                 </ul>
             </nav>
         </header>
         <main>
             <div class="col__left">
                 <div class="photo__wrapper">
-                    <img class="photo" src="/img/picture.png" alt="">
+                    <img class="photo" src="/img/picture.png" alt="Evgeniia Shirshikova">
                 </div>
                 <section id="contacts">
                     <h2 class="contacts__title">contacts</h2>
@@ -59,6 +60,7 @@
             <div class="col__right">
                 <section id="about">
                     <h1>Evgeniia Shirshikova</h1>
+                    <div class="about__job">Front-End developer</div>
                     <h2 class="about__title">About me</h2>
                     <div class="divider divider-grey"></div>
                     <p>My name is Evgeniia. I'm looking for Frontend developer positions in website environment,
@@ -78,6 +80,57 @@
                         <li>Figma, Canva, XD, Sketch</li>
                         <li>Slack, Discord, Trello, Asana, Chat GPT</li>
                     </ul>
+                </section>
+                <section id="languages">
+                    <h2 class="languages__title">languages</h2>
+                    <div class="divider divider-grey"></div>
+                    <ul>
+                        <li>Russian - Native</li>
+                        <li>English - C2</li>
+                    </ul>
+                </section>
+                <section id="code-example">
+                    <h2 class="code-example__title">code example</h2>
+                    <div class="divider divider-grey"></div>
+                    <pre>
+                    <code data-language="JavaScript">
+    function showTime(city, timeZone) {
+        let now = new Date();
+        let time = now.toLocaleTimeString("en-US", {
+            timeZone: timeZone,
+            hour: "2-digit",
+            minute: "2-digit",
+            hour12: true,
+        });
+        let hours = time.slice(0, 2);
+        let minutes = time.slice(3, 8);
+        let classHours = ".hours-" + city;
+        let classMinutes = ".minutes-" + city;
+        let hoursWrappers = 
+        document.querySelectorAll(classHours);
+        let minutesWrappers = 
+        document.querySelectorAll(classMinutes);
+        hoursWrappers.forEach((item) => {
+            item.innerHTML = hours;
+        });
+        minutesWrappers.forEach((item) => {
+            item.innerHTML = minutes;
+        });
+        setTimeout(() => showTime(city, timeZone), 1000);
+    }
+                                
+    showTime("newyork", "America/New_York");
+    showTime("paris", "Europe/Paris");
+    </code></pre>
+                </section>
+                <section id="projects">
+                    <h2 class="projects__title">projects</h2>
+                    <div class="divider divider-grey"></div>
+                    <a class="projects__card" href="https://destinymatrix.netlify.app/">
+                        <div class="projects__img-wrapper">
+                            <img src="/img/matrix-card.png" alt="destiny matrix calculator">
+                        </div>
+                    </a>
 
                 </section>
             </div>
