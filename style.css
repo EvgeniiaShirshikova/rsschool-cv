@@ -6,12 +6,20 @@ body {
   color: #343434;
 }
 
-header {
-  padding: 10px;
+header,
+footer {
+  background-color: #e24343;
+  color: #ffffff;
+}
+
+nav {
+  padding: 10px 20px;
+  background-color: rgba(256, 256, 256, 10%);
 }
 
 ul {
   padding: 0;
+  margin: 0;
 }
 li {
   margin: 10px 0;
@@ -19,7 +27,7 @@ li {
 }
 
 a {
-  color: #343434;
+  color: white;
   text-decoration: none;
 }
 
@@ -38,27 +46,28 @@ main {
 }
 
 h1,
-h2 {
+h2,
+h3 {
   font-family: "Manrope", sans-serif;
   font-style: normal;
-  text-transform: uppercase;
 }
 
 h1 {
   margin: 0 0 20px 0;
   font-size: 32px;
   font-weight: 800;
+  text-transform: uppercase;
 }
 
 h2 {
   margin: 0;
   font-size: 18px;
   font-weight: 700;
+  text-transform: uppercase;
 }
 
 h3 {
-  font-family: "Manrope", sans-serif;
-  font-style: normal;
+  font-size: 18px;
   margin: 0;
   font-weight: 700;
 }
@@ -127,12 +136,7 @@ img {
 }
 
 #education {
-  height: 100%;
   background-color: rgba(256, 256, 256, 10%);
-}
-
-#about {
-  padding-top: 0;
 }
 
 .divider-grey {
@@ -150,12 +154,17 @@ img {
   gap: 10px;
 }
 .projects__card {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
   border: 1px solid #8b8b8b;
   border-radius: 10px;
   overflow: hidden;
+  color: #343434;
+}
+
+.projects__card-content {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .projects__card:hover {
@@ -178,4 +187,22 @@ img {
   flex-wrap: wrap;
   align-items: center;
   gap: 5px;
+}
+
+.footer__inner {
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(256, 256, 256, 10%);
+}
+
+.footer__link {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.footer__icon-wrapper {
+  width: 50px;
 }
