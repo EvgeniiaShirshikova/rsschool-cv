@@ -22,8 +22,22 @@ a {
 a:hover {
   text-decoration: underline;
 }
+
 section {
   padding: 10px;
+}
+
+main {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+h2 {
+  font-family: "Manrope", sans-serif;
+  font-size: 32px;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .container {
@@ -39,5 +53,27 @@ section {
 }
 
 #about {
-  background-color: ;
+  background-color: #e24343;
+  color: #ffffff;
+}
+
+.col__left {
+  width: 40%;
+}
+
+.col__right {
+  width: 60%;
+}
+
+.about__img-wrapper {
+  margin: 20px auto;
+  width: 200px;
+  height: 200px;
+  border-radius: 100%;
+  overflow: hidden;
+  background-color: #eeeeee;
+}
+
+.about__img {
+  width: 100%;
 }
