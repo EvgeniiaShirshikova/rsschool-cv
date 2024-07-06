@@ -6,11 +6,169 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/normalize.css">
     <link rel="stylesheet" href="/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
     <title>Document</title>
 </head>
 
 <body>
+    <div class="container">
+        <header class="header">
+            <nav class="nav mob-hide">
+                <ul class="menu">
+                    <li><a href="/#about">About me</a></li>
+                    <li><a href="/#skills">Working skills</a></li>
+                    <li><a href="/#languages">Languages</a></li>
+                    <li><a href="/#contacts">Contacts</a></li>
+                    <li><a href="/#education">Education</a></li>
+                    <li><a href="/#code-example">Code example</a></li>
+                    <li><a href="/#projects">Projects</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main class="main">
+            <div class="col__left">
+                <div class="photo__wrapper mob-hide">
+                    <img src="/img/picture.png" alt="Evgeniia Shirshikova">
+                </div>
+                <section id="contacts">
+                    <h2 class="contacts__title">contacts</h2>
+                    <div class="divider divider-white"></div>
+                    <ul>
+                        <li>Email:<br /><a href="mailto:evgeniiashirshikova@gmail.com">evgeniiashirshikova@gmail.com</a>
+                        </li>
+                        <li>Telegram:<br />@evgeniya_shir</li>
+                        <li>Phone number:</li>
+                    </ul>
 
+                </section>
+                <section id="education">
+                    <h2 class="education__title">Education</h2>
+                    <div class="divider divider-white"></div>
+                    <ul>
+                        <li>2024 - PRESENT<br />Front-end/React Developer at RSschool</li>
+                        <li>2024 - PRESENT<br />Webflow Pro at Pixel Perfect</li>
+                        <li>2023 - 2023<br />Webflow Basics at Pixel Perfect</li>
+                        <li>2022 - 2023<br />Web Developer at IT girls school</li>
+                        <li>2003 - 2008<br />Master's degree in Economics, Ural State University of Economics</li>
+                    </ul>
+                </section>
+            </div>
+            <div class="col__right">
+
+                <section id="about">
+                    <h1>Evgeniia Shirshikova</h1>
+                    <div class="about__job">Front-End developer</div>
+                    <div class="photo__wrapper mob-show">
+                        <img src="/img/picture.png" alt="Evgeniia Shirshikova">
+                    </div>
+                    <h2 class="about__title">About me</h2>
+                    <div class="divider divider-grey"></div>
+                    <p>My name is Evgeniia. I'm looking for Frontend developer positions in website environment,
+                        and I'll be using the technical and problem-solving skills I've developed via
+                        studies and work. I value user experience and work toward a faultless user interface, which
+                        allows me to manage multiple tasks at once and demonstrates my commitment, organization, and
+                        adaptability even under pressure. </p>
+                </section>
+                <section id="skills">
+                    <h2 class="skills__title">Working skills</h2>
+                    <div class="divider divider-grey"></div>
+                    <ul>
+                        <li>HTML, CSS, SASS</li>
+                        <li>JavaScript, React</li>
+                        <li>GSAP library, Lenis library</li>
+                        <li>Webflow</li>
+                        <li>Figma, Canva, XD, Sketch</li>
+                        <li>Slack, Discord, Trello, Asana, Chat GPT</li>
+                    </ul>
+                </section>
+                <section id="languages">
+                    <h2 class="languages__title">languages</h2>
+                    <div class="divider divider-grey"></div>
+                    <ul>
+                        <li>Russian - Native</li>
+                        <li>English - C2</li>
+                    </ul>
+                </section>
+                <section id="code-example">
+                    <h2 class="code-example__title">code example</h2>
+                    <div class="divider divider-grey"></div>
+                    <pre>
+                    <code data-language="JavaScript">
+function showTime(city, timeZone) {
+    let now = new Date();
+    let time = now.toLocaleTimeString("en-US", {
+        timeZone: timeZone,
+        hour: "2-digit",
+        minute: "2-digit",
+        hour12: true,
+    });
+    let hours = time.slice(0, 2);
+    let minutes = time.slice(3, 8);
+    let classHours = ".hours-" + city;
+    let classMinutes = ".minutes-" + city;
+    let hoursWrappers = 
+    document.querySelectorAll(classHours);
+    let minutesWrappers = 
+    document.querySelectorAll(classMinutes);
+    hoursWrappers.forEach((item) => {
+        item.innerHTML = hours;
+    });
+    minutesWrappers.forEach((item) => {
+        item.innerHTML = minutes;
+    });
+    setTimeout(() => showTime(city, timeZone), 1000);
+}
+                                
+showTime("newyork", "America/New_York");
+showTime("paris", "Europe/Paris");
+    </code></pre>
+                </section>
+                <section id="projects">
+                    <h2 class="projects__title">projects</h2>
+                    <div class="divider divider-grey"></div>
+                    <div class="projects__cards">
+                        <a class="projects__card" href="https://destinymatrix.netlify.app/" target="_blank">
+                            <div class="projects__img-wrapper">
+                                <img src="/img/matrix-card.png" alt="destiny matrix calculator">
+                            </div>
+                            <div class="projects__card-content">
+                                <h3>Destiny Matrix calculator</h3>
+                                <div class="projects__icons">
+                                    <div class="projects__icon-wrapper">
+                                        <img src="/img/icons8-html-5-48.png" alt="" title="HTML">
+                                    </div>
+                                    <div class="projects__icon-wrapper">
+                                        <img src="/img/icons8-css3-48.png" alt="" title="CSS">
+                                    </div>
+                                    <div class="projects__icon-wrapper">
+                                        <img src="/img/icons8-javascript-48.png" alt="" title="JavaScript">
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </section>
+            </div>
+        </main>
+        <footer class="footer">
+            <div class="footer__inner">
+                <a class="footer__link" href="https://github.com/EvgeniiaShirshikova/" target="_blank">
+                    <div class="footer__icon-wrapper"><img src="/img/GitHub-Icon-White-Logo.wine.svg" alt="Github icon">
+                    </div>My GitHub
+                </a>
+                <div>2024</div>
+                <a class="footer__link" href="https://rs.school/courses/javascript-ru" target="_blank">
+                    <div class="footer__icon-wrapper"><img src="/img/rs-school-logo.svg" alt="RSschool icon">
+                    </div>
+                </a>
+            </div>
+
+        </footer>
+    </div>
 </body>
 
 </html>
