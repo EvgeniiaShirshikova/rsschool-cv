@@ -114,13 +114,13 @@ function showTime(city, timeZone) {
     document.querySelectorAll(classHours);
     let minutesWrappers = 
     document.querySelectorAll(classMinutes);
-    hoursWrappers.forEach((item) => {
+    hoursWrappers.forEach((item) =&gt; {
         item.innerHTML = hours;
     });
-    minutesWrappers.forEach((item) => {
+    minutesWrappers.forEach((item) =&gt; {
         item.innerHTML = minutes;
     });
-    setTimeout(() => showTime(city, timeZone), 1000);
+    setTimeout(() =&gt; showTime(city, timeZone), 1000);
 }
                                 
 showTime("newyork", "America/New_York");
