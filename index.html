@@ -108,9 +108,9 @@ function showTime(city, timeZone) {
     let minutes = time.slice(3, 8);
     let classHours = ".hours-" + city;
     let classMinutes = ".minutes-" + city;
-    let hoursWrappers = 
+    let hoursWrappers =
     document.querySelectorAll(classHours);
-    let minutesWrappers = 
+    let minutesWrappers =
     document.querySelectorAll(classMinutes);
     hoursWrappers.forEach((item) =&gt; {
         item.innerHTML = hours;
@@ -120,7 +120,7 @@ function showTime(city, timeZone) {
     });
     setTimeout(() =&gt; showTime(city, timeZone), 1000);
 }
-                                
+
 showTime("newyork", "America/New_York");
 showTime("paris", "Europe/Paris");
     </code></pre>
