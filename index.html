@@ -48,8 +48,8 @@
                     <h2 class="education__title">Education</h2>
                     <div class="divider divider-white"></div>
                     <ul>
-                        <li>2024 - PRESENT<br>Front-end/React Developer at RSschool</li>
-                        <li>2024 - PRESENT<br>Webflow Pro at Pixel Perfect</li>
+                        <li>2025 - PRESENT<br>Front-end/React Developer at RSschool</li>
+                        <li>2024 - 2024<br>Webflow Pro at Pixel Perfect</li>
                         <li>2023 - 2023<br>Webflow Basics at Pixel Perfect</li>
                         <li>2022 - 2023<br>Web Developer at IT girls school</li>
                         <li>2003 - 2008<br>Master's degree in Economics, Ural State University of Economics</li>
@@ -96,33 +96,53 @@
                     <div class="divider divider-grey"></div>
                     <pre>
                     <code data-language="JavaScript">
-function showTime(city, timeZone) {
-    let now = new Date();
-    let time = now.toLocaleTimeString("en-US", {
-        timeZone: timeZone,
-        hour: "2-digit",
-        minute: "2-digit",
-        hour12: true,
-    });
-    let hours = time.slice(0, 2);
-    let minutes = time.slice(3, 8);
-    let classHours = ".hours-" + city;
-    let classMinutes = ".minutes-" + city;
-    let hoursWrappers =
-    document.querySelectorAll(classHours);
-    let minutesWrappers =
-    document.querySelectorAll(classMinutes);
-    hoursWrappers.forEach((item) =&gt; {
-        item.innerHTML = hours;
-    });
-    minutesWrappers.forEach((item) =&gt; {
-        item.innerHTML = minutes;
-    });
-    setTimeout(() =&gt; showTime(city, timeZone), 1000);
+const cities = [
+{ name: "beirut", timeZone: "Asia/Beirut" },
+{ name: "dubai", timeZone: "Asia/Dubai" },
+{ name: "riyadh", timeZone: "Asia/Riyadh" },
+{ name: "singapore", timeZone: "Asia/Singapore" },
+{ name: "barcelona", timeZone: "Europe/Madrid" }
+];
+
+function updateTimes() {
+// Проверка разрешения экрана
+if (window.innerWidth <= 992) {
+return;
 }
 
-showTime("newyork", "America/New_York");
-showTime("paris", "Europe/Paris");
+const now = new Date();
+const times = cities.map(city => {
+const time = now.toLocaleTimeString("en-US", {
+timeZone: city.timeZone,
+hour: "2-digit",
+minute: "2-digit",
+second: "2-digit",
+hour12: false,
+});
+return {
+name: [city.name](http://city.name/),
+formattedTime: time.split(':').map(t => t.trim())
+};
+});
+
+times.forEach(({ name, formattedTime }) => {
+const [hours, minutes, seconds] = formattedTime;
+// Обновление элементов на странице
+document.querySelector(`.time__hours.${name}`).innerHTML = hours;
+document.querySelector(`.time__minutes.${name}`).innerHTML = minutes;
+document.querySelector(`.time__seconds.${name}`).innerHTML = seconds;
+
+const deg = 6;
+const clockHours = (hours % 12) * 30; // Приведение к 12-часовому формату
+const clockMinutes = minutes * deg;
+
+document.querySelector(`.clock__hours.${name}`).style.transform = `rotateZ(${clockHours + (clockMinutes / 12)}deg)`;
+document.querySelector(`.clock__minutes.${name}`).style.transform = `rotateZ(${clockMinutes}deg)`;
+});
+}
+
+setInterval(updateTimes, 1000);
+updateTimes();
     </code></pre>
                 </section>
                 <section id="projects">
@@ -160,7 +180,7 @@ showTime("paris", "Europe/Paris");
                             alt="Github icon">
                     </div>My GitHub
                 </a>
-                <div>2024</div>
+                <div>2025</div>
                 <a class="footer__link" href="https://rs.school/courses/javascript" target="_blank">
                     <div class="footer__icon-wrapper"><img src="./img/rs-school-logo.svg" alt="RSschool icon">
                     </div>
