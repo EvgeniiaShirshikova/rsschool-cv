@@ -105,7 +105,6 @@ const cities = [
 ];
 
 function updateTimes() {
-// Проверка разрешения экрана
 if (window.innerWidth <= 992) {
 return;
 }
@@ -120,20 +119,20 @@ second: "2-digit",
 hour12: false,
 });
 return {
-name: [city.name](http://city.name/),
+name: city.name,
 formattedTime: time.split(':').map(t => t.trim())
 };
 });
 
 times.forEach(({ name, formattedTime }) => {
 const [hours, minutes, seconds] = formattedTime;
-// Обновление элементов на странице
+
 document.querySelector(`.time__hours.${name}`).innerHTML = hours;
 document.querySelector(`.time__minutes.${name}`).innerHTML = minutes;
 document.querySelector(`.time__seconds.${name}`).innerHTML = seconds;
 
 const deg = 6;
-const clockHours = (hours % 12) * 30; // Приведение к 12-часовому формату
+const clockHours = (hours % 12) * 30;
 const clockMinutes = minutes * deg;
 
 document.querySelector(`.clock__hours.${name}`).style.transform = `rotateZ(${clockHours + (clockMinutes / 12)}deg)`;
