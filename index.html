@@ -32,13 +32,13 @@
         <main class="main">
             <div class="col__left">
                 <div class="photo__wrapper mob-hide">
-                    <img src="./img/picture.png" alt="Evgeniia Shirshikova">
+                    <img src="./img/picture.png" alt="Evgeniia Chapman">
                 </div>
                 <section id="contacts">
                     <h2 class="contacts__title">contacts</h2>
                     <div class="divider divider-white"></div>
                     <ul>
-                        <li>Email:<br><a href="mailto:evgeniiashirshikova@gmail.com">evgeniiashirshikova@gmail.com</a>
+                        <li>Email:<br><a href="mailto:jeanchapman146@gmail.com">jeanchapman146@gmail.com</a>
                         </li>
                         <li>Telegram:<br>@evgeniya_shir</li>
                         <li>Phone number:</li>
@@ -127,16 +127,21 @@ formattedTime: time.split(':').map(t => t.trim())
 times.forEach(({ name, formattedTime }) => {
 const [hours, minutes, seconds] = formattedTime;
 
-document.querySelector(`.time__hours.${name}`).innerHTML = hours;
-document.querySelector(`.time__minutes.${name}`).innerHTML = minutes;
-document.querySelector(`.time__seconds.${name}`).innerHTML = seconds;
+document.querySelector(`.time__hours.${name}`).innerHTML
+  = hours;
+document.querySelector(`.time__minutes.${name}`).innerHTML
+  = minutes;
+document.querySelector(`.time__seconds.${name}`).innerHTML
+  = seconds;
 
 const deg = 6;
 const clockHours = (hours % 12) * 30;
 const clockMinutes = minutes * deg;
 
-document.querySelector(`.clock__hours.${name}`).style.transform = `rotateZ(${clockHours + (clockMinutes / 12)}deg)`;
-document.querySelector(`.clock__minutes.${name}`).style.transform = `rotateZ(${clockMinutes}deg)`;
+document.querySelector(`.clock__hours.${name}`).style.transform
+  = `rotateZ(${clockHours + (clockMinutes / 12)}deg)`;
+document.querySelector(`.clock__minutes.${name}`).style.transform
+  = `rotateZ(${clockMinutes}deg)`;
 });
 }
 
