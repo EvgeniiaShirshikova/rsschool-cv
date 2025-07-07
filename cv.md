@@ -6,7 +6,7 @@
 
 USA, VA, Franklin
 
-+1(434)569-0425
+phone number
 
 evgeniiashirshikova@gmail.com
 
