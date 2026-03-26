@@ -110,7 +110,7 @@ return;
 }
 
 const now = new Date();
-const times = cities.map(city => {
+const times = cities.map(city =&gt; {
 const time = now.toLocaleTimeString("en-US", {
 timeZone: city.timeZone,
 hour: "2-digit",
@@ -120,11 +120,11 @@ hour12: false,
 });
 return {
 name: city.name,
-formattedTime: time.split(':').map(t => t.trim())
+formattedTime: time.split(':').map(t =&gt; t.trim())
 };
 });
 
-times.forEach(({ name, formattedTime }) => {
+times.forEach(({ name, formattedTime }) =&gt; {
 const [hours, minutes, seconds] = formattedTime;
 
 document.querySelector(`.time__hours.${name}`).innerHTML
